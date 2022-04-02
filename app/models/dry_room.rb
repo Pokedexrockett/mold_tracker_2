@@ -1,0 +1,2 @@
+class DryRoom < ApplicationRecord
+end
