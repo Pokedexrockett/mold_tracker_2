@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :photos
+  resources :notes
   resources :dry_rooms
   resources :strains
   resources :users

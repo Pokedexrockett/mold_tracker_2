@@ -5,9 +5,9 @@ class CreateStrains < ActiveRecord::Migration[7.0]
       t.string :batch_number
       t.string :metric_tag
       t.string :date
-      t.string :mold_weight
-      t.string :user_id
-      t.string :dry_room_id
+      t.integer :mold_weight
+      t.integer :user_id
+      t.integer :dry_room_id
 
       t.timestamps
     end
