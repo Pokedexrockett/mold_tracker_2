@@ -18,24 +18,12 @@ users = User.create([{ employee: "Dexter Crockett" }, { employee: "Lorelai gilmo
 #                           { name: "Dog Patch", batch_number: "1A00000023451", metric_tag: "1A00000065437", date: "03/02/2022", mold_weight: 20, dry_room_id: 6 } 
 #                         ])   
 
-Strain.create(name: "Girl Scout Cookies", batch_number: "1A00000023456", metric_tag: "1A00000065432", date: "03/02/2022", mold_weight: 20, dry_room_id: 1, user: users.first).images.attach(
-    io: File.open("app/assets/images/1.jpg"),
-    filename: "strain_mold_1.jpg")
-Strain.create(name: "Grand Daddy Purple", batch_number: "1A00000023457", metric_tag: "1A00000065433", date: "03/02/2022", mold_weight: 20, dry_room_id: 1, user: users.second).images.attach(
-    io: File.open("app/assets/images/2.jpg"),
-    filename: "strain_mold_2.jpg")
-Strain.create(name: "Miracle Alien Cookies #12", batch_number: "1A00000023458", metric_tag: "1A00000065434", date: "03/02/2022", mold_weight: 20, dry_room_id: 3, user: users.third).images.attach(
-    io: File.open("app/assets/images/3.jpg"),
-    filename: "strain_mold_3.jpg")
-Strain.create(name: "Blue Dream", batch_number: "1A00000023459", metric_tag: "1A00000065435", date: "03/02/2022", mold_weight: 20, dry_room_id: 4, user: users.fourth).images.attach(
-    io: File.open("app/assets/images/4.jpg"),
-    filename: "strain_mold_4.jpg")
-Strain.create(name: "Florida Kush", batch_number: "1A00000023450", metric_tag: "1A00000065436", date: "03/02/2022", mold_weight: 20, dry_room_id: 6, user: users.fifth).images.attach(
-    io: File.open("app/assets/images/5.jpg"),
-    filename: "strain_mold_5.jpg")
-Strain.create(name: "Dog Patch", batch_number: "1A00000023451", metric_tag: "1A00000065437", date: "03/02/2022", mold_weight: 20, dry_room_id: 6, user: users.fifth).images.attach(
-    io: File.open("app/assets/images/6.jpg"),
-    filename: "strain_mold_6.jpg")
+Strain.create(name: "Girl Scout Cookies", batch_number: "1A00000023456", metric_tag: "1A00000065432", date: "03/02/2022", mold_weight: 20, dry_room_id: 1, user: users.first)
+Strain.create(name: "Grand Daddy Purple", batch_number: "1A00000023457", metric_tag: "1A00000065433", date: "03/02/2022", mold_weight: 20, dry_room_id: 1, user: users.second)
+Strain.create(name: "Miracle Alien Cookies #12", batch_number: "1A00000023458", metric_tag: "1A00000065434", date: "03/02/2022", mold_weight: 20, dry_room_id: 3, user: users.third)
+Strain.create(name: "Blue Dream", batch_number: "1A00000023459", metric_tag: "1A00000065435", date: "03/02/2022", mold_weight: 20, dry_room_id: 4, user: users.fourth)
+Strain.create(name: "Florida Kush", batch_number: "1A00000023450", metric_tag: "1A00000065436", date: "03/02/2022", mold_weight: 20, dry_room_id: 6, user: users.fifth)
+Strain.create(name: "Dog Patch", batch_number: "1A00000023451", metric_tag: "1A00000065437", date: "03/02/2022", mold_weight: 20, dry_room_id: 6, user: users.fifth)
                
 
 dry_rooms = DryRoom.create ([ { room_number: 1 }, { room_number: 2 }, { room_number: 3 }, { room_number: 4 }, { room_number: 5 }, { room_number: 6 } ])
@@ -53,36 +41,36 @@ Note.create(description:"Wet", user_id: 6, strain_id: 6)
 
 # .images.attach(
 #     io: File.open("app/assets/images/1.jpg"),
-#     filename: "strain_mold_1.jpg"
+#     filename: "1.jpg"
 # )
 
 # .images.attach(
 #     io: File.open("app/assets/images/2.jpg"),
-#     filename: "strain_mold_2.jpg"
+#     filename: "2.jpg"
 # )
 # strain.save!
 # strain.user = user[2]
 # strain.images.attach(
 #     io: File.open("app/assets/images/3.jpg"),
-#     filename: "strain_mold_3.jpg"
+#     filename: "3.jpg"
 # )
 # strain.save!
 # strain.user = user[3]
 # strain.images.attach(
 #     io: File.open("app/assets/images/4.jpg"),
-#     filename: "strain_mold_4.jpg"
+#     filename: "4.jpg"
 # )
 # strain.save!
 # strain.user = user[4]
 # strain.images.attach(
 #     io: File.open("app/assets/images/5.jpg"),
-#     filename: "strain_mold_5.jpg"
+#     filename: "5.jpg"
 # )
 # strain.save!
 # strain.user = user[5]
 # strain.images.attach(
 #     io: File.open("app/assets/images/6.jpg"),
-#     filename: "strain_mold_6.jpg"
+#     filename: "6.jpg"
 # )
 # strain.save!
 
