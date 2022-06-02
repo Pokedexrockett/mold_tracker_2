@@ -18,22 +18,22 @@ users = User.create([{ employee: "Dexter Crockett" }, { employee: "Lorelai gilmo
 #                           { name: "Dog Patch", batch_number: "1A00000023451", metric_tag: "1A00000065437", date: "03/02/2022", mold_weight: 20, dry_room_id: 6 } 
 #                         ])   
 
-Strain.create(name: "Girl Scout Cookies", batch_number: "1A00000023456", metric_tag: "1A00000065432", date: "03/02/2022", mold_weight: 20, dry_room_id: 1, user: users.first)
-Strain.create(name: "Grand Daddy Purple", batch_number: "1A00000023457", metric_tag: "1A00000065433", date: "03/02/2022", mold_weight: 20, dry_room_id: 1, user: users.second)
-Strain.create(name: "Miracle Alien Cookies #12", batch_number: "1A00000023458", metric_tag: "1A00000065434", date: "03/02/2022", mold_weight: 20, dry_room_id: 3, user: users.third)
-Strain.create(name: "Blue Dream", batch_number: "1A00000023459", metric_tag: "1A00000065435", date: "03/02/2022", mold_weight: 20, dry_room_id: 4, user: users.fourth)
-Strain.create(name: "Florida Kush", batch_number: "1A00000023450", metric_tag: "1A00000065436", date: "03/02/2022", mold_weight: 20, dry_room_id: 6, user: users.fifth)
-Strain.create(name: "Dog Patch", batch_number: "1A00000023451", metric_tag: "1A00000065437", date: "03/02/2022", mold_weight: 20, dry_room_id: 6, user: users.fifth)
+strains = Strain.create(name: "Girl Scout Cookies", batch_number: "1A00000023456", metric_tag: "1A00000065432", date: "03/02/2022", mold_weight: 20, dry_room_id: 1, user: users.first)
+strains = Strain.create(name: "Grand Daddy Purple", batch_number: "1A00000023457", metric_tag: "1A00000065433", date: "03/02/2022", mold_weight: 20, dry_room_id: 1, user: users.second)
+strains = Strain.create(name: "Miracle Alien Cookies #12", batch_number: "1A00000023458", metric_tag: "1A00000065434", date: "03/02/2022", mold_weight: 20, dry_room_id: 3, user: users.third)
+strains = Strain.create(name: "Blue Dream", batch_number: "1A00000023459", metric_tag: "1A00000065435", date: "03/02/2022", mold_weight: 20, dry_room_id: 4, user: users.fourth)
+strains = Strain.create(name: "Florida Kush", batch_number: "1A00000023450", metric_tag: "1A00000065436", date: "03/02/2022", mold_weight: 20, dry_room_id: 6, user: users.fifth)
+strains = Strain.create(name: "Dog Patch", batch_number: "1A00000023451", metric_tag: "1A00000065437", date: "03/02/2022", mold_weight: 20, dry_room_id: 6, user: users.fifth)
                
 
 dry_rooms = DryRoom.create ([ { room_number: 1 }, { room_number: 2 }, { room_number: 3 }, { room_number: 4 }, { room_number: 5 }, { room_number: 6 } ])
 
-Note.create(description:"Very wet", user_id: 1, strain_id: 1)
-Note.create(description:"A lot of fan leaves", user_id: 2, strain_id: 2)
-Note.create(description:"Pretty dry", user_id: 3, strain_id: 3)
-Note.create(description:"Too wet and a lot of fan leaves", user_id: 4, strain_id: 4)
-Note.create(description:"Slightly wet", user_id: 5, strain_id: 5)
-Note.create(description:"Wet", user_id: 6, strain_id: 6)
+notes = Note.create(description:"Very wet", user_id: 1, strain_id: 1)
+notes = Note.create(description:"A lot of fan leaves", user_id: 2, strain_id: 2)
+notes = Note.create(description:"Pretty dry", user_id: 3, strain_id: 3)
+notes = Note.create(description:"Too wet and a lot of fan leaves", user_id: 4, strain_id: 4)
+notes = Note.create(description:"Slightly wet", user_id: 5, strain_id: 5)
+notes = Note.create(description:"Wet", user_id: 6, strain_id: 6)
                          
                        
 
