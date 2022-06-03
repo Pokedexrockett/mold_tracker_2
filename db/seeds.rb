@@ -6,8 +6,9 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-users = User.create([{ employee: "Dexter Crockett" }, { employee: "Lorelai gilmore" }, { employee: "Seth Rogen"}, { employee: "Genkai"},
-                     { employee: "Eleanor Shellstrop" }, { employee: "Jeff Goldblum" }
+users = User.create([{ employee: "Dexter Crockett", email: "dcrockett@thehighplace.com", password: "testing1" }, { employee: "Lorelai gilmore", email: "lgilmore@thehighplace.com", password: "testing2" }, 
+                     { employee: "Seth Rogen", email: "srogen@thehighplace.com", password: "testing3"}, { employee: "Genkai", email: "genkai@thehighplace.com", password: "testing4"},
+                     { employee: "Eleanor Shellstrop", email: "eshellstrop@thehighplace.com", password: "testing5" }, { employee: "Jeff Goldblum", email: "jgoldblum@thehighplace.com", password: "testing6" }
                     ])
 
 # strains = Strain.create([ { name: "Girl Scout Cookies", batch_number: "1A00000023456", metric_tag: "1A00000065432", date: "03/02/2022", mold_weight: 20, dry_room_id: 1 },
