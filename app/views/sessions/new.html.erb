@@ -1,9 +1,15 @@
-<h1> Login </h1>
+<h1>Login</h1>
+
+<% flash.each do |type, msg| %>
+    <div>
+      <%= msg %>
+    </div>
+  <% end %>
 
 <%= form_for(:user, url: login_path) do |f|%>
     <%= f.label :employee %>
-    <%= f.test_field :employee %>
+    <%= f.text_field :employee %>
     <%= f.label :password %>
-    <%= f.password_field :employee %>
-    <%= f.submit "Log in %>
+    <%= f.password_field :password %>
+    <%= f.submit "Log in" %>
 <% end %>
