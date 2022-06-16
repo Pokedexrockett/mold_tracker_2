@@ -1,2 +1,4 @@
 class DryRoomsController < ApplicationController
+
+    
 end

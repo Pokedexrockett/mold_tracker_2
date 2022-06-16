@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :notes
   resources :dry_rooms
   resources :strains
-  resources :users
+  
   
   get '/' => 'sessions#home'
   get '/login' => 'sessions#new'
@@ -10,6 +10,9 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/signup' => 'users#create'
   get '/logout' => 'sessions#destroy'
+
+
+  resources :users
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
