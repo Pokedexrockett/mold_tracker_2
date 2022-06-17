@@ -5,6 +5,8 @@ class Strain < ApplicationRecord
     has_many_attached :images 
     has_many :users, through: :notes
 
-    validates :name, :batch_number, :metric_tag, :date, :mold_weight
+    validates :name, :batch_number, :metric_tag, :date, :mold_weight, presence: true
+
+    
 
 end
