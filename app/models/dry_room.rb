@@ -1,5 +1,7 @@
 class DryRoom < ApplicationRecord
     has_many :strains
 
-    validates :name, presence: true
+    validates :room_number, presence: true
+
+    scope :alpha, -> {order(:room_number)}
 end
