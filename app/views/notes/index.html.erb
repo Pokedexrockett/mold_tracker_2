@@ -1,0 +1,15 @@
+<h1> Note Index Page </h1>
+
+<% if @strain %>
+    <h1>Notes for <%= @strain.name %> - <%= @strain.batch_number %> - <%= @strain.metric_tag %> - <%= @strain.date %> - <%= @strain.mold_weight %> - <%= @strain.dry_room %> </h1>
+    <% else %>
+    <h1>All Notes</h1>
+<% end %>
+
+<ul>
+    <% @notes.each do |description|%>
+    <li>
+    <% review.strain.name %>: <%= link_to description.form, description_path(description)%> - 
+    </li><br>
+<% end %>
+</ul>
