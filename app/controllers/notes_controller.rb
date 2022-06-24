@@ -1,10 +1,11 @@
 class NotesController < ApplicationController
+   before_action :redirect_if_not_logged_in
 
    def new
       if @strain = Strain.find_by_id(params[:strain_id])
-         @review = @strain.notes.build
+         @note = @strain.notes.build
       else
-         @review = Review.new
+         @note = Note.new
       end
    end
 
@@ -27,6 +28,7 @@ class NotesController < ApplicationController
          @notes = @strain.notes
       else
          @notes = Note.all
+      end
    end
 
 

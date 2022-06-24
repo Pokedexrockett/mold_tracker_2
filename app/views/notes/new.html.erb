@@ -8,24 +8,25 @@
         </div>
     <% end %>
     <div>
-        <% f.label :batch_number, "Enter Batch" %>
-        <% f.text_field :batch_number %>  
+        <% f.label :strain_id, "Enter Batch Number" %>
+        <% f.collection_select :strain_id, Strain.alpha, :id, :batch_number, include_blank: true %>  
     </div>
     <br>
     <div>
-        <% f.label :metric_tag, "Enter Metric" %>
-        <% f.text_field :metric_tag %>  
+        <% f.label :strain_id, "Enter Metric Tag" %>
+        <% f.collection_select :strain_id, Strain.alpha, :id, :metric_tag, include_blank: true %> 
     </div>
     <br>
     <div>
-        <% f.label :mold_weight, "Enter Mold Weight" %>
-        <% f.number_field :mold_weight %>  
+        <% f.label :strain_id, "Enter Mold Weight" %>
+        <% f.collection_select :strain_id, Strain.alpha, :id, :mold_weight, include_blank: true %> 
     </div>
     <br>
     <div>
-        <% f.label :description, "Enter Descriotion" %>
-        <% f.text_area :description, size: "25x10" %>  
+        <%= f.label :description %>
+        <%= f.text_area :description, size: "25x10" %>  
     </div>
+    <br>
 
     <%= f.submit %>
 
