@@ -1,0 +1,31 @@
+<%= form_for(@note) do |f| %>
+    <% if params[:strain_id] %>
+        <%= f.hidden_field :strain_id %>
+    <% else %>
+        <div>
+            <% f.label :strain_id, "Select Strain" %>
+            <% f.collection_select :strain_id, Strain.alpha, :id, :name, include_blank: true %>
+        </div>
+    <% end %>
+    <div>
+        <% f.label :batch_number, "Enter Batch" %>
+        <% f.text_field :batch_number %>  
+    </div>
+    <br>
+    <div>
+        <% f.label :metric_tag, "Enter Metric" %>
+        <% f.text_field :metric_tag %>  
+    </div>
+    <br>
+    <div>
+        <% f.label :mold_weight, "Enter Mold Weight" %>
+        <% f.number_field :mold_weight %>  
+    </div>
+    <br>
+    <div>
+        <% f.label :description, "Enter Descriotion" %>
+        <% f.text_area :description, size: "25x10" %>  
+    </div>
+
+
+<% end %>
