@@ -56,7 +56,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_07_015247) do
   end
 
   create_table "notes", force: :cascade do |t|
+    t.string "employee"
+    t.integer "mold_weight"
     t.string "description"
+    t.string "mold_photos"
     t.integer "user_id"
     t.integer "strain_id"
     t.datetime "created_at", null: false
@@ -67,8 +70,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_07_015247) do
     t.string "name"
     t.string "batch_number"
     t.string "metric_tag"
-    t.string "date"
-    t.integer "mold_weight"
     t.integer "user_id"
     t.integer "dry_room_id"
     t.datetime "created_at", null: false

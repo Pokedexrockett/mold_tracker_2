@@ -59,4 +59,9 @@ class StrainsController < ApplicationController
     def strain_params
         params.require(:strain).permit(:name, :batch_number, :metric_tag, :date, :mold_weight, :dry_room_id, dry_room_attributes: [:room_number], images: [])
     end
+
+    def set_strain
+        @strain = Strain.find_by(id: params[:id])
+        redirect_to strains_path if !@strain 
+    end
 end
