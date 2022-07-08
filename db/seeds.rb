@@ -30,7 +30,6 @@ strains = Strain.create(name: "Dog Patch", batch_number: "1A00000023451", metric
 dry_rooms = DryRoom.create ([ { room_number: 1 }, { room_number: 2 }, { room_number: 3 }, { room_number: 4 }, { room_number: 5 }, { room_number: 6 } ])
 
 notes = Note.create(employee: "Dexter Crockett", mold_weight: 20, description:"Very wet", user_id: 1, strain_id: 1,)
-
 notes = Note.create(employee: "Elanor Shellstrop", mold_weight: 20, description:"A lot of fan leaves", user_id: 2, strain_id: 2)
 notes = Note.create(employee: "Lorelai gilmore", mold_weight: 20, description:"Pretty dry", user_id: 3, strain_id: 3)
 notes = Note.create(employee: "Seth Rogen", mold_weight: 20, description:"Too wet and a lot of fan leaves", user_id: 4, strain_id: 4)
