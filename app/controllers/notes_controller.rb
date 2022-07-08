@@ -25,7 +25,7 @@ class NotesController < ApplicationController
 
    def index
       if @strain = Strain.find_by_id(params[:strain_id])
-         @notes = @strain.notes
+         @notes = @strain.notes.all.with_attached_images
       else
          @notes = Note.all
       end
@@ -34,6 +34,6 @@ class NotesController < ApplicationController
 
    private
    def note_params
-    params.require(:note).permit(:strain_id, :batch_number_id, :metric_tag, :mold_weight, :description, :images)
+    params.require(:note).permit(:strain_id, :batch_number_id, :metric_tag, :mold_weight, :description, :image)
    end
 end
