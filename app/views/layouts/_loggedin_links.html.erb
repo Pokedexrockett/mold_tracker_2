@@ -2,8 +2,6 @@
 <%= link_to "Add Strain", new_strain_path %> |
 <%= link_to "All Strains", strains_path %> |
 <%= link_to "Add Note", new_note_path %> |
-<%= link_to "All Notes", logout_path %> |
-<%= link_to "Add Employee", logout_path %> |
-<%= link_to "All Employees", logout_path %> |
-<%= link_to "All Dry Rooms", logout_path %> |
-<%= link_to "Home", logout_path %> |
+<%= link_to "All Notes", notes_path %> |
+<%= link_to "All Dry Rooms", dry_rooms_path %> |
+<%= link_to "Home", user_path(current_user) %> |
