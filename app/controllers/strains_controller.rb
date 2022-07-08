@@ -24,7 +24,7 @@ class StrainsController < ApplicationController
             @strains = dry_room.strains
 
         else
-            @strains = Strain.order_by_name.includes(:dry_room)
+            @strains = Strain.order_by_batch_number.includes(:dry_room)
         end
     end
 
