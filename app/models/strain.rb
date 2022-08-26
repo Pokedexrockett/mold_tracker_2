@@ -6,7 +6,7 @@ class Strain < ApplicationRecord
 
     validates :name, :batch_number, :metric_tag, presence: true
 
-    scope :order_by_batch_number, -> {left_joins(:notes).group(:id).order('batch_id desc')}
+    scope :order_by_batch_number, -> {left_joins(:notes).group(:id).order('batch_number desc')}
 
     def self.alpha
         order(:name)

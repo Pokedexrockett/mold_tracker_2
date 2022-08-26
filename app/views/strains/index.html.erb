@@ -7,6 +7,6 @@
 <% @strains.each do |s| %>
 
   <h2><%= link_to s.name, strain_path(s.id)%> - <%= s.dry_room.room_number %></h2>
-  <%= link_to "Write a note", new_strain_note_path(s.id) %> 
-  <p><%= s.category %></p>
+  <%= link_to "Write a note", new_note_path(s.id) %> 
+  <p><%= s.metric_tag %></p>
   <% end %>

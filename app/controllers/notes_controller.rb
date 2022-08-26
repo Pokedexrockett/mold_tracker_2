@@ -34,6 +34,6 @@ class NotesController < ApplicationController
 
    private
    def note_params
-    params.require(:note).permit(:strain_id, :batch_number_id, :metric_tag, :mold_weight, :description, :image)
+    params.require(:note).permit(:strain_id, :batch_number, :metric_tag, :mold_weight, :description, :image)
    end
 end
