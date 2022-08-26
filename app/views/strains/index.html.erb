@@ -1,0 +1,11 @@
+<h1>All Strains</h1>
+<%= form_tag('/strains',:method=>:get) do %>                          
+<%= select_tag "dry_room_id", options_from_collection_for_select(DryRoom.all, "id", "room_number", params[:dry_room_id]), include_blank: 'Select One' %>    
+<%= submit_tag %>
+<% end %>
+<% @strains.each do |s| %>
+
+  <h2><%= link_to s.name, strain_path(s.id)%> - <%= s.dry_room.room_number %></h2>
+  <%= link_to "Write a note", new_strain_note_path(s.id) %> 
+  <p><%= s.category %></p>
+  <% end %>
