@@ -1,0 +1,19 @@
+<h1><%= @strain.name %>  </h1>
+
+<h2> <%= @strain.dry_room.room_number %> </h2>
+
+<div>
+  <p><%= @strain.batch_number %></p>
+  <p><%= @strain.metric_tag %></p>
+</div>
+
+
+<%= link_to "Edit #{@strain.name}", edit_strain_path(@strain) if @strain.user == current_user %>
+<br></br>
+
+<%= link_to "Make a note of this strain", new_note_path(strain_id: @strain.id) %> 
+
+
+<br></br>
+
+<%= link_to "See all Notes", notes_path(@strain) %>

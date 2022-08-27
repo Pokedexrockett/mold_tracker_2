@@ -1,5 +1,8 @@
 class StrainsController < ApplicationController
 
+    before_action :redirect_if_not_logged_in
+    before_action :set_strain, only: [:show, :edit, :update] 
+
     def new
         @strain = Strain.new
         @strain.build_dry_room
